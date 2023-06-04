@@ -57,6 +57,9 @@ html{
    10px/16px = 0.625 = 62.5%
 */
   font-size: 62.5%;
+   /*All the elements overflow: in the horizontal then make it hidden*/
+    overflow-x: hidden;
+   
 }
 
 
@@ -65,7 +68,11 @@ body{
   font-family: 'Rubik' ,sans-serif;
   font-weight: 400;
   line-height: 1;
-  color: #555;
+  color: #555;   
+
+  /*All the elements overflow: in the horizontal then make it hidden*/
+    overflow-x: hidden;
+   
 }
 strong{
   font-weight: 600;
@@ -239,8 +246,9 @@ strong{
   list-style-type: none;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 4.8rem;
 }
+
 .main-nav-link:link,
 .main-nav-link:visited{
   display: inline-block;
@@ -268,6 +276,24 @@ strong{
 .main-nav-link.nav-cta:active{
   background-color: #cf711f;
 }
+
+/*MOBILE*/
+.btn--mobile-nav{
+  border: none;
+  background: none;
+  cursor: pointer;
+  display:none;
+
+}
+.icon--mobile-nav{
+  color: #333;
+  height: 4.8rem;
+  width: 4.8rem;
+}
+/*selecting attribute on basis of name*/
+.icon--mobile-nav[name="close-outline"]{
+   display: none;
+}
 /*****************************************/
 /*HEADER SECTION*/
 /*****************************************/
@@ -277,8 +303,9 @@ strong{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
-  /* Because we want hader to be sticky later */
+  /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
 }
@@ -295,10 +322,9 @@ strong{
 .section-hero{
   background-color: #fdf2e9;
   /* padding: 3.6rem 0; */
-  padding: 3.6rem 0 7.2rem 3.6;
+  padding: 3.6rem 0 7.2rem 3.6rem;
 
 }
-
 
 .hero-description{
   font-size: 2rem;
@@ -309,13 +335,13 @@ strong{
 
 
 .hero{
+  max-width: 120rem;
   display: grid;
   padding: 3.2rem;
   gap: 6.4rem;
   align-items: center;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  max-width: 120rem;
 }
 
 .hero-img{
@@ -501,6 +527,7 @@ strong{
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon{
