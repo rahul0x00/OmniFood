@@ -101,6 +101,8 @@
 /****************************************************/
   .btn--mobile-nav{
     display: block;
+    /* This will keep the focus on close btn in nav */
+    z-index: 9999;
   }
   .main-nav{
     background-color: rgba(255,255,255,0.97);
@@ -156,6 +158,9 @@
   .main-nav-list{
     flex-direction:column;
     gap: 4.8rem;;
+
+    /* temporary */
+    margin-top: 10rem;
   }
   .main-nav-link:link,
   .main-nav-link:visited{
